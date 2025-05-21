@@ -4,7 +4,7 @@ import { useCart } from "../../context/CartContext";
 
 const Item = (props) => {
   const { data } = props;
-const {formatMoney} = useCart()
+  const { formatMoney, remove, addQuantity, reduceQuantity } = useCart();
 
   return (
     <div className="card">
@@ -14,12 +14,12 @@ const {formatMoney} = useCart()
         <p className="price">ราคา : {formatMoney(data.price)} บาท</p>
       </div>
       <div className="quantity">
-        <button>+</button>
+        <button onClick={() => addQuantity(data.id)}>+</button>
         <p>{data.quantity}</p>
-        <button>-</button>
+        <button onClick={()=> reduceQuantity(data.id)}>-</button>
       </div>
       <div className="total">{formatMoney(data.quantity * data.price)} บาท</div>
-      <button>
+      <button onClick={() => remove(data.id)}>
         <AiOutlineDelete />
       </button>
     </div>

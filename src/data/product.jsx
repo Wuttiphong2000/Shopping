@@ -6,7 +6,7 @@ const products = [
         name : "หมวก",
         image: "/assets/product1.png",
         price:2000,
-        quantity:5
+        quantity:3
     },
     {
         id:2,

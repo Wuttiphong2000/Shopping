@@ -6,3 +6,15 @@
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
 }
+
+.cart {
+  height: 100vh; 
+}
+
+.cart h1{
+  margin: 30px 0;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
